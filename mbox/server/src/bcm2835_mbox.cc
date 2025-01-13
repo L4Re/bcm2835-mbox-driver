@@ -39,8 +39,8 @@ Bcm2835_mbox::Bcm2835_mbox(char const *cap_name, l4_uint8_t log2_dma_buf_size,
   l4_addr_t mmio_addr = 0;
   l4_size_t mmio_size = 0;
 
-  auto _icu = L4Re::chkcap(L4Re::Util::cap_alloc.alloc<L4::Icu>(),
-                          "Allocate ICU capability");
+  _icu = L4Re::chkcap(L4Re::Util::cap_alloc.alloc<L4::Icu>(),
+                      "Allocate ICU capability");
   L4vbus::Icu icudev;
   L4Re::chksys(vbus->root().device_by_hid(&icudev, "L40009"),
                "Look for ICU device");
