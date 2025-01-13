@@ -20,7 +20,7 @@
 
 #include <l4/cxx/list_alloc>
 #include <l4/cxx/ref_ptr>
-#include <l4/mbox/mbox_base.h>
+#include <l4/mbox-bcm2835/mbox_base.h>
 #include <l4/re/env>
 #include <l4/re/error_helper>
 #include <l4/re/mmio_space>

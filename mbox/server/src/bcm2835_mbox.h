@@ -22,7 +22,7 @@
 #include <l4/cxx/unique_ptr>
 #include <l4/cxx/utils>
 #include <l4/drivers/hw_mmio_register_block>
-#include <l4/mbox/mbox_base.h>
+#include <l4/mbox-bcm2835/mbox_base.h>
 #include <l4/re/error_helper>
 #include <l4/re/dataspace>
 #include <l4/re/dma_space>
