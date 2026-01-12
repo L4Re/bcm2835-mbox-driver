@@ -73,12 +73,6 @@ Bcm2835_mbox::Bcm2835_mbox(char const *cap_name, l4_uint8_t log2_dma_buf_size,
               irq_num = res.start;
               irq_mode = L4_irq_mode(res.flags);
             }
-          else if (res.type == L4VBUS_RESOURCE_IRQ)
-            {
-              // Create IRQ server object and register at registry.
-              irq_num = res.start;
-              irq_mode = L4_irq_mode(res.flags);
-            }
         }
 
       if (!mmio_addr)
