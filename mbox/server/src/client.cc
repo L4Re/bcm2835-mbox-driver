@@ -311,7 +311,7 @@ Client::bind_irq(L4::Ipc::Snd_fpage irq_cap_fp)
     return -L4_EBUSY;
   _irq_client = irqc;
   server_iface()->realloc_rcv_cap(0);
-  return L4_EOK;
+  return 0L; // direct unmask via IRQ object using L4::Irq::unmask()
 }
 
 long

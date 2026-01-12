@@ -114,7 +114,7 @@ public:
     return ios.prepare_ipc(ret);
   }
 
-  // Dataspace for IO
+  // Dataspace interface for IO
   long op_allocate(L4Re::Dataspace::Rights, l4_addr_t, l4_size_t)
   { return -L4_ENOSYS; }
   long op_copy_in(L4Re::Dataspace::Rights, L4Re::Dataspace::Offset,
@@ -156,7 +156,7 @@ public:
   }
 
 
-  // ICU for Vbus events -- dummy
+  // ICU -- bind/unbind to/from virtual IRQ
   long op_bind(L4::Icu::Rights, l4_umword_t, L4::Ipc::Snd_fpage irq_cap_fp)
   { return bind_irq(irq_cap_fp); }
   int op_unbind(L4::Icu::Rights, l4_umword_t, L4::Ipc::Snd_fpage)
