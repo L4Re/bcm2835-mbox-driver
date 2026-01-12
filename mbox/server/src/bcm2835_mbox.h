@@ -152,6 +152,7 @@ public:
   /** Client interface: DMA-attach a DMA buffer. */
   void attach_and_dma_map(L4::Cap<L4Re::Dataspace> ds, l4_uint8_t log2_size,
                           l4_uint8_t **dma_virt, Dma_addr *dma_phys);
+
   /**
    * Client interface: Read MMIO register.
    * \param[in]  reg_offs  Register offset.
@@ -160,8 +161,8 @@ public:
    * The most important Mbox0_read and Mbox0_status registers are emulated at
    * the client side.
    */
-
   long mmio_read(unsigned reg_offs, l4_uint64_t *value);
+
   /**
    * Client interface: Write MMIO register.
    * \param[in] reg_offs   Register offset.
